@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <div class="container">
+        <h1>{{nome}}</h1>
+        <h3>Proprietário(a):{{proprietario}}</h3>
+        <h3>Todos os registros</h3>
+        <div class="form">
+            {% csrf_token %}
+            <table border='1'>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Data</th>
+                    <th>Valor</th>
+                    <th>CPF</th>
+                    <th>Cartão</th>
+                    <th>Hora</th>
+                </tr>
+                {% for file in dict %}
+                <tr>
+                    <td>{{ file.tipo }}</td>
+                    <td>{{ file.data }}</td>
+                    <td> R$ {{ file.valor }}</td>
+                    <td>{{ file.cpf }}</td>
+                    <td>{{ file.cartão }}</td>
+                    <td>{{ file.hora }}</td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <th>Total em caixa:</th>
+                    <th>R$ {{valor}}</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

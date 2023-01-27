@@ -2,3 +2,9 @@ body {
     background-color: lightblue;
     font-family: verdana;
   }
+
+.btn{
+  padding: 5px;
+  border-radius: 5px;
+  background-color: blue;
+}

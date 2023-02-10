@@ -1,6 +1,7 @@
 # d_backend
 
-Aplicação Back-End paseada em um arquivo de texto(CNAB)
+Aplicação Back-End baseada em um arquivo de texto(CNAB) para controle de entradas e saidas de valores.
+Dentro da aplicação temos uma página home, onde deve ser feito o upload do arquivo a ser parseado. Ao fim do carregagento os dados serão tratados e o usuário será encaminhado para uma página onde serão listadas todas as empresas que possuem registros no arquivo enviado, e ao clicar em cada uma delas será redirecionado para uma página que exibe uma tabela com todos os dados de entrada e saida de valores da empresa selecionada, junto ao valor total em caixa.
 
 
 # Instruções para inicializar o projeto:
